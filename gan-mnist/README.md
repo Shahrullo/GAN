@@ -59,6 +59,14 @@ The generator has been found to perform the best with $tanh$ for the generator o
 ```
 Epoch [  100/  100] | d_loss: 1.3607 | g_loss: 1.2538
 ```
+<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/loss.PNG">
+
+Below I'm showing the generated images as the network was training, every 10 epochs.
+
+<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/sample.PNG">
+
+It starts out as all noise. Then it learns to make only the center white and the rest black. You can start to see some number like structures appear out of the noise like 1s and 9s.
+
 
 
 
