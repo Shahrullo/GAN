@@ -36,7 +36,7 @@ The discriminator network is going to be a pretty typical linear classifier. To 
 
 We should use a leaky ReLU to allow gradients to flow backwards through the layer unimpeded. A leaky ReLU is like a normal ReLU, except that there is a small non-zero output for negative input values.
 
-<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/leaky_relu.png">
+<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/leaky_relu.png" width=40%>
 
 #### Sigmoid Output
 We'll also take the approach of using a more numerically stable loss function on the outputs. Recall that we want the discriminator to output a value 0-1 indicating whether an image is real or fake.
@@ -52,7 +52,7 @@ The generator network will be almost exactly the same as the discriminator netwo
 
 The generator has been found to perform the best with $tanh$ for the generator output, which scales the output to be between -1 and 1, instead of 0 and 1. 
 
-<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/tanh_fn.png">
+<img src="https://github.com/Shahrullo/GAN/blob/main/gan-mnist/assets/tanh_fn.png" width=40%>
 
 ## Training results
 
