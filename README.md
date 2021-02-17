@@ -5,3 +5,4 @@ The repo shows implementing GAN in different datasets. You can find full detaile
 Here is the list of directs:
 
 * [MNIST](https://github.com/Shahrullo/GAN/tree/main/gan-mnist)
+* [DCGAN](https://github.com/Shahrullo/GAN/tree/main/dcgan)
