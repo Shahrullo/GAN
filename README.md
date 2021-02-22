@@ -6,4 +6,4 @@ Here is the list of directs:
 
 * [MNIST](https://github.com/Shahrullo/GAN/tree/main/gan-mnist)
 * [DCGAN](https://github.com/Shahrullo/GAN/tree/main/dcgan)
-* [CYCLE-GAN](https://github.com/Shahrullo/GAN/tree/main/cycle-gan)
+* [CycleGAN](https://github.com/Shahrullo/GAN/tree/main/cycle-gan)
