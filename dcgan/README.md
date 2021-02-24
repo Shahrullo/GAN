@@ -21,3 +21,7 @@ Here is the architecture of our model
 We also use batch normalization [nn.BatchNorm2d](https://pytorch.org/docs/stable/nn.html#batchnorm2d) on each layer **except** the first convolutional layer and final, linear output layer.  
 
 ### Generator
+
+In Generator the input will be our noise vector *z. And the output will be a $tanh$ output with size 32x32 which is the size of SVHN images.
+
+![Generator](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/conv_generator.png)
