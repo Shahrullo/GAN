@@ -50,3 +50,14 @@ Training will involve alternating between training the discriminator and the gen
 1. Generate fake images
 2. Compute the discriminator loss on fake images, using **flipped** labels!
 3. Perform backpropagation + an optimization step to update the generator's weights
+
+### Training loss
+
+Plot of the training losses for the generator and discriminator, recorded after each epoch.
+![train_loss](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/TrainlLoss.PNG)
+
+
+### Generator samples from training
+Here we can view samples of images from the generator. We'll look at the images we saved during training.
+
+![generated images](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/generatedexamples.PNG)
