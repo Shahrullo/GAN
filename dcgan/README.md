@@ -34,3 +34,19 @@ In Generator the input will be our noise vector *z. And the output will be a $ta
 * And, apply batch normalization and ReLU to all but the last of these hidden layers. Where it will be just applied a tanh activation.
 
 ![Generator](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/conv_generator.png)
+
+
+## Train
+Training will involve alternating between training the discriminator and the generator.
+
+### Discriminator training
+1. Compute the discriminator loss on real, training images
+2. Generate fake images
+3. Compute the discriminator loss on fake, generated images
+4. Add up real and fake loss
+5. Perform backpropagation + an optimization step to update the discriminator's weights
+
+### Generator training
+1. Generate fake images
+2. Compute the discriminator loss on fake images, using **flipped** labels!
+3. Perform backpropagation + an optimization step to update the generator's weights
