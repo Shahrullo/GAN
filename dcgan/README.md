@@ -14,7 +14,11 @@ A GAN is comprised of two adversarial networks, a discriminator and a generator.
 
 The Discriminator is a convolutional classifier without any maxpooling layers
 
-Here is the architecture of our model
+* The inputs to the discriminator are 32x32x3 tensor images
+* A few convolutional, hidden layers
+* Last a fully connected layer for the output; we want a [sigmoid](https://pytorch.org/docs/stable/nn.functional.html?highlight=sigmoid#torch.nn.functional.sigmoid) output, but we'll add that in the loss function, [BCEWithLogitsLoss](https://pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html#torch.nn.BCEWithLogitsLoss)
+
+Here is the architecture of our discriminator
 
 ![Discriminator](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/conv_discriminator.png)
 
@@ -23,5 +27,10 @@ We also use batch normalization [nn.BatchNorm2d](https://pytorch.org/docs/stable
 ### Generator
 
 In Generator the input will be our noise vector *z. And the output will be a $tanh$ output with size 32x32 which is the size of SVHN images.
+
+* The first layer is a fully connected layer which is reshaped into a deep and narrow layer, something like 4x4x512.
+* Batch normalization and a leaky ReLU activation.
+* Next is a series of [transpose convolutional layers](https://pytorch.org/docs/stable/generated/torch.nn.ConvTranspose2d.html#torch.nn.ConvTranspose2d), where typically halve the depth and double the width and height of the previous layer.
+* And, apply batch normalization and ReLU to all but the last of these hidden layers. Where it will be just applied a tanh activation.
 
 ![Generator](https://github.com/Shahrullo/GAN/blob/main/dcgan/assets/conv_generator.png)
